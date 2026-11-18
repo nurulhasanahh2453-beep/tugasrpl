@@ -1,0 +1,59 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown PSAS II - 30 Desember 2026</title>
+    <!-- Menghubungkan ke file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1 id="judul-acara">Hitung Mundur PSAS II</h1>
+            <p id="subjudul-tanggal">Target: 30 Desember 2026, Pukul 07:00:00</p>
+        </header>
+
+        <!-- Bagian Tampilan Hitung Mundur Publik -->
+        <main id="countdown-box" class="countdown-wrapper">
+            <div class="time-card">
+                <span id="hari">00</span>
+                <p>Hari</p>
+            </div>
+            <div class="time-card">
+                <span id="jam">00</span>
+                <p>Jam</p>
+            </div>
+            <div class="time-card">
+                <span id="menit">00</span>
+                <p>Menit</p>
+            </div>
+            <div class="time-card">
+                <span id="detik">00</span>
+                <p>Detik</p>
+            </div>
+        </main>
+
+        <!-- Bagian Notifikasi Waktu Habis (Disembunyikan di awal) -->
+        <div id="pesan-selesai" class="hidden">
+            <h2>WAKTU UJIAN PSAS II TELAH DIMULAI!</h2>
+        </div>
+
+        <hr>
+
+        <!-- Fitur Input Waktu (Custom Timer) -->
+        <section class="custom-timer">
+            <h3>Atur Waktu Hitung Mundur Baru</h3>
+            <div class="input-group">
+                <input type="datetime-local" id="input-waktu">
+                <button id="btn-mulai">Mulai Hitung Mundur</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menghubungkan ke file JavaScript -->
+    <script src="script.js"></script>
+    <p>&copy; 2026 Nurul hasanahRPL.</p>
+</body>
+</html>

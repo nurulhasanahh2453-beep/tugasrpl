@@ -1,0 +1,187 @@
+@charset "utf-8";
+/* CSS Document */
+/* Mengimpor font aesthetic dari Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    /* Latar belakang gradasi pink pastel yang lembut dan cerah */
+    background: linear-gradient(135deg, #ffdde1 0%, #ee9ca7 100%);
+    color: #5c1a33;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+.container {
+    /* Efek kartu kaca putih bersih (Frosted Glass) */
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+    padding: 44px 32px;
+    border-radius: 30px;
+    box-shadow: 0 20px 50px rgba(183, 65, 102, 0.18);
+    text-align: center;
+    max-width: 580px;
+    width: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.85);
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.3rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #9e2a4b;
+    letter-spacing: -0.5px;
+}
+
+header p {
+    font-size: 0.9rem;
+    color: #b54866;
+    margin-bottom: 32px;
+    font-weight: 600;
+    letter-spacing: 0.3px;
+}
+
+.countdown-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+    margin-bottom: 32px;
+}
+
+.time-card {
+    background: rgba(255, 255, 255, 0.85);
+    padding: 20px 10px;
+    border-radius: 22px;
+    border: 1px solid #f7cad0;
+    box-shadow: 0 8px 20px rgba(214, 90, 126, 0.08);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.time-card:hover {
+    transform: translateY(-5px);
+    background: #ffffff;
+    border-color: #e05780;
+    box-shadow: 0 12px 24px rgba(224, 87, 128, 0.18);
+}
+
+.time-card span {
+    display: block;
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #d6336c;
+    line-height: 1.1;
+}
+
+.time-card p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-top: 8px;
+    color: #a64d68;
+    font-weight: 700;
+}
+
+/* Styling Notifikasi Waktu Habis */
+#pesan-selesai {
+    background: linear-gradient(135deg, #ff758f, #ff4d6d);
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 10px 25px rgba(255, 77, 109, 0.35);
+    animation: gentlePulse 2s infinite;
+}
+
+#pesan-selesai h2 {
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.hidden {
+    display: none !important;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(181, 72, 102, 0.25), transparent);
+    margin: 28px 0;
+}
+
+/* Styling Custom Timer */
+.custom-timer h3 {
+    font-size: 0.95rem;
+    margin-bottom: 14px;
+    font-weight: 600;
+    color: #8c2f4b;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+input[type="datetime-local"] {
+    padding: 12px 16px;
+    border-radius: 16px;
+    border: 1.5px solid #f4acb7;
+    background: #ffffff;
+    font-size: 0.9rem;
+    outline: none;
+    color: #5c1a33;
+    font-weight: 600;
+    transition: all 0.2s ease;
+}
+
+input[type="datetime-local"]:focus {
+    border-color: #d6336c;
+    box-shadow: 0 0 0 4px rgba(214, 51, 108, 0.15);
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 16px;
+    border: none;
+    background: linear-gradient(135deg, #e05780, #c9184a);
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(201, 24, 74, 0.25);
+    transition: all 0.25s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff758f, #d6336c);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(201, 24, 74, 0.35);
+}
+
+/* Responsif untuk layar HP */
+@media (max-width: 480px) {
+    .countdown-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    header h1 {
+        font-size: 1.8rem;
+    }
+}
+
+@keyframes gentlePulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
